@@ -5,10 +5,13 @@ import pyautogui as pg
 import time
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options
 from PIL import Image
 from io import BytesIO
 import os
-
+chrome_options = Options()
+chrome_options.add_argument("--headless")
+driver = webdriver.Chrome(options=chrome_options)
 def click_element(driver, path):
     element = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH, path))
@@ -22,13 +25,13 @@ def click_element(driver, path):
 
 def login(rollnum, date, driver):
     driver.get(constants.LOGIN_LINK)
-    time.sleep(5)
+    # time.sleep(5)
     # click_element(driver, constants.DENY_ONTIFICATION)
     roll_input = driver.find_element(By.XPATH, constants.ROLL_NUM_INPUT)
     roll_input.clear()
     roll_input.send_keys(rollnum)
 
-    time.sleep(5)
+    # time.sleep(5)
     dob_input = driver.find_element(By.XPATH, constants.DOB_INPUT)
     dob_input.clear()
     dob_input.send_keys(date) 
