@@ -69,4 +69,3 @@ def takeScreenShot(driver, pathLocation, set_class, set_name):
     image = Image.open(BytesIO(screenshot))
     image.save(f"./{pathLocation}/{set_class}/{set_name}/screenshot.png")
     click_element(driver, constants.LOGIN_BUTTON)
-
