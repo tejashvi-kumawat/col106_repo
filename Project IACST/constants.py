@@ -1,0 +1,10 @@
+REGISTRATION_LINK = "https://iacst.aakash.ac.in/"
+LOGIN_LINK = "https://iacstdashboard.aakash.ac.in/dashboard"
+DENY_ONTIFICATION = "/html/body/div/div[2]/div[2]/button[1]" 
+VIEW_RESULT = "/html/body/div[1]/div[3]/div[1]/div[2]/div[2]/div[2]/button"
+PRINT = "/html/body/div[1]/div[1]/div[1]/div[2]/button"
+NUM_OF_TABS_AFTER_PRINT = 8
+NUM_OF_TABS_AFTER_ENTERING_FILE_NAME = 2
+ROLL_NUM_INPUT = "/html/body/div[1]/div[2]/div[2]/div/div/div[1]/div/input"
+DOB_INPUT = "/html/body/div[1]/div[2]/div[2]/div/div/span/div/div/input"
+LOGIN_BUTTON = "/html/body/div[1]/div[2]/div[2]/div/div/button"
